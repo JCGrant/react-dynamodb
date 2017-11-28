@@ -1,0 +1,11 @@
+#set($inputRoot = $input.path('$'))
+{
+    "comments": [
+        #foreach($elem in $inputRoot.Items) {
+            "commentId": "$elem.commentId.S",
+            "userName": "$elem.userName.S",
+            "message": "$elem.message.S"
+        }#if($foreach.hasNext),#end
+	#end
+    ]
+}

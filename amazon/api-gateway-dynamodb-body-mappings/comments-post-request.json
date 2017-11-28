@@ -1,0 +1,17 @@
+{ 
+    "TableName": "Comments",
+    "Item": {
+        "commentId": {
+            "S": "$context.requestId"
+        },
+        "pageId": {
+            "S": "$input.path('$.pageId')"
+        },
+        "userName": {
+            "S": "$input.path('$.userName')"
+        },
+        "message": {
+            "S": "$input.path('$.message')"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "TableName": "Comments",
+    "IndexName": "pageId-index",
+    "KeyConditionExpression": "pageId = :v1",
+    "ExpressionAttributeValues": {
+        ":v1": {
+            "S": "$input.params('pageId')"
+        }
+    }
+}
