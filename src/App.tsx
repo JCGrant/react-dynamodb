@@ -79,8 +79,8 @@ class Page extends React.Component<PageProps, PageLocalState> {
 
   onClickNewCommentButton = () => {
     if (this.state.newCommentText.length > 0) {
-      newComment(this.state.newCommentText, this.props.id);
-      this.setComments();
+      newComment(this.state.newCommentText, this.props.id)
+      .then(this.setComments);
     }
   }
 
